@@ -42,7 +42,7 @@ const index = () => {
                 
             }}>
                 <Grid container spacing={2}>
-                    <Grid elevation={0} item xs={6} sx={{height: "90vh", boxShadow: "none", backgroundColor: "#f9f9f9"}}>
+                    <Grid elevation={0} item xs={12} md={6}  sx={{height: "90vh", boxShadow: "none", backgroundColor: "#f9f9f9"}}>
                     <Item sx={{boxShadow: "none", backgroundColor: "#f9f9f9"}}>
                         <Typography variant='h1' sx={{mt: "15vh", ml: "3vw", fontSize: "6rem", textAlign: "left", fontWeight: "500"}}>
                         Making <span style={{color: "#A6B92D"}}>NITS Green</span>
@@ -55,7 +55,7 @@ const index = () => {
                         </Link>
                     </Item>
                     </Grid>
-                    <Grid elevation={0} item xs={6} sx={{height: "90vh", position: "relative", boxShadow: "none", backgroundColor: "#f9f9f9"}}>
+                    <Grid elevation={0} item xs={12} md={6} sx={{height: "90vh", position: "relative", boxShadow: "none", backgroundColor: "#f9f9f9"}}>
                     <Item sx={{boxShadow: "none", backgroundColor: "#f9f9f9"}}>
                         <img src={PIC1} alt="PIC" style={{height: "40vw", width: "40vw"}} />
                     </Item>
@@ -72,12 +72,12 @@ const index = () => {
                 
             }}>
                 <Grid container spacing={2}>
-                    <Grid elevation={0} item xs={6} sx={{height: "90vh", position: "relative", boxShadow: "none", backgroundColor: "#f9f9f9"}}>
+                    <Grid elevation={0} item md={6} sm={12} sx={{height: "90vh", position: "relative", boxShadow: "none", backgroundColor: "#f9f9f9"}}>
                         <Item sx={{boxShadow: "none", backgroundColor: "#f9f9f9"}}>
                             <img src={PIC2} alt="PIC" style={{height: "40vw", width: "40vw"}} />
                         </Item>
                     </Grid>
-                    <Grid elevation={0} item xs={6} sx={{height: "90vh", boxShadow: "none", backgroundColor: "#f9f9f9"}}>
+                    <Grid elevation={0} item md={6} sm={12} sx={{height: "90vh", boxShadow: "none", backgroundColor: "#f9f9f9"}}>
                     <Item sx={{boxShadow: "none", backgroundColor: "#f9f9f9"}}>
                         <Typography variant='h1' sx={{mt: "15vh", ml: "3vw", fontSize: "4rem", textAlign: "left", fontWeight: "500"}}>
                         <span style={{color: "#A6B92D"}}>What</span> we do

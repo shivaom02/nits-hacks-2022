@@ -5,6 +5,7 @@ import './App.css';
 
 const Team = React.lazy( () => import("./pages/Team" ) );
 const Home = React.lazy( () => import("./pages/Home" ) );
+const Profile = React.lazy( () => import("./pages/Profile" ) );
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/team' element={<Team />} />
+          <Route exact path='/profile' element={<Profile />} />
 
         </Routes>
       </Router>
