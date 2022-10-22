@@ -7,6 +7,7 @@ import Marketplace from "./abis/Marketplace.json";
 import Test from "./components/Test";
 
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 export const Toastify = (type, msg) => {
   switch (type) {
