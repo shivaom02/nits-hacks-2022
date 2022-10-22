@@ -4,6 +4,11 @@ class Test extends Component {
   render() {
     return (
       <div id="content">
+        {this.props.account === "0xD9c1c439c3fF89482C83eb5fe7bd81a8Ea1a8a87" ? (
+          <>hi</>
+        ) : (
+          <></>
+        )}
         <h1>Add Product</h1>
         <form
           onSubmit={(event) => {
