@@ -27,6 +27,9 @@ export const Toastify = (type, msg) => {
 
 const Team = React.lazy(() => import("./pages/Team"));
 const Home = React.lazy(() => import("./pages/Home"));
+const Profile = React.lazy(() => import("./pages/Profile"));
+const Redeem = React.lazy(() => import("./pages/Redeem"));
+const Admin = React.lazy(() => import("./pages/Admin"));
 
 class App extends Component {
   async loadWeb3() {
@@ -147,6 +150,9 @@ class App extends Component {
           />
           <Route exact path="/" element={<Home />} />
           <Route exact path="/team" element={<Team />} />
+          <Route exact path="/profile" element={<Profile />} />
+          <Route exact path="/redeem" element={<Redeem />} />
+          <Route exact path="/admin" element={<Admin />} />
         </Routes>
       </Router>
     );

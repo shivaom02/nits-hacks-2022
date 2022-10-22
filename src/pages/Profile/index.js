@@ -17,6 +17,8 @@ import ProfilePic from "../../images/profilepic.svg";
 import Health1 from "../../images/health1.svg";
 import Health2 from "../../images/health2.svg";
 import Health3 from "../../images/health3.svg";
+import Graph from "../../images/graph.PNG";
+import Coin from "../../images/coin.svg";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#fff" : "#fff",
@@ -44,7 +46,7 @@ const Profile = () => {
       >
         {/* upper part */}
         <Paper
-          elevation={10}
+          elevation={0}
           className="home1"
           sx={{
             height: "70vh",
@@ -52,13 +54,12 @@ const Profile = () => {
             margin: "0 auto",
             marginTop: "3vh",
             position: "relative",
-            backgroundColor: "black",
           }}
         >
           <Grid container spacing={2}>
             {/* left of upper */}
             <Grid
-              elevation={8}
+              elevation={12}
               item
               xs={12}
               md={4}
@@ -123,6 +124,7 @@ const Profile = () => {
                   </Grid>
                 </Grid>
                 <br />
+                <br />
                 <Grid container spacing={1} xs={{ mt: 3, display: "block" }}>
                   <Grid item xs={12} lg={4}>
                     <Item
@@ -167,13 +169,158 @@ const Profile = () => {
                     </Item>
                   </Grid>
                 </Grid>
+                <Typography>
+                  Waste collected yet:{" "}
+                  <span style={{ color: "#3cc151" }}>1.2 kg</span>
+                </Typography>
+                <Link
+                  sx={{
+                    backgroundImage:
+                      "linear-gradient(to right, #ff0000, #ff7a00)",
+                    color: "#fff",
+                    borderRadius: "4rem",
+                    p: 1.5,
+                    pl: 4,
+                    pr: 4,
+                    letterSpacing: "1px",
+                    display: "inline-block",
+                    m: 4,
+                    fontSize: "1rem",
+                  }}
+                  underline="none"
+                >
+                  Request Emergency Pickup
+                </Link>
               </Item>
             </Grid>
             {/* right of upper */}
-            <Grid elevation={10} item xs={12} md={8}>
-              <Item>xs=6 md=4</Item>
+            <Grid elevation={12} item xs={12} md={8}>
+              <Item>
+                <Grid container spacing={2}>
+                  <Grid item xs={8}>
+                    <Item sx={{ background: "transparent", boxShadow: "none" }}>
+                      <Typography variant="h5" sx={{ textAlign: "left", m: 2 }}>
+                        Your Green Score:{" "}
+                        <span style={{ color: "#3cc151", fontWeight: 500 }}>
+                          225
+                        </span>
+                      </Typography>
+                    </Item>
+                  </Grid>
+                  <Grid item xs={4}>
+                    <Item sx={{ background: "transparent", boxShadow: "none" }}>
+                      <Typography
+                        variant="h5"
+                        sx={{
+                          textAlign: "left",
+                          mr: 1,
+                          mt: 4,
+                          display: "inline-block",
+                        }}
+                      >
+                        12
+                      </Typography>
+                      <IconButton sx={{ p: 1, display: "inline-block" }}>
+                        <Avatar
+                          alt="S"
+                          sx={{
+                            width: "2vw",
+                            height: "2vw",
+                            m: "0 auto",
+                            borderRadius: 0,
+                            border: "none",
+                          }}
+                          src={Coin}
+                        />
+                      </IconButton>
+                    </Item>
+                  </Grid>
+                </Grid>
+                <br />
+                <Grid container spacing={8}>
+                  <Grid item xs={12} lg={4}>
+                    <Item
+                      sx={{
+                        background: "#48A9F8",
+                        height: "14vh",
+                        borderRadius: "2rem",
+                      }}
+                    >
+                      <Typography
+                        sx={{ color: "#fff", textAlign: "right", mt: "3.5vh" }}
+                      >
+                        Total waste Recycled:{" "}
+                        <span style={{ display: "block", fontSize: "2rem" }}>
+                          12Kg
+                        </span>
+                      </Typography>
+                    </Item>
+                  </Grid>
+                  <Grid item xs={12} lg={4}>
+                    <Item
+                      sx={{
+                        background: "#19d085",
+                        height: "14vh",
+                        borderRadius: "2rem",
+                      }}
+                    >
+                      <Typography
+                        sx={{ color: "#fff", textAlign: "right", mt: "3.5vh" }}
+                      >
+                        Total carbon emission saved:{" "}
+                        <span style={{ display: "block", fontSize: "2rem" }}>
+                          109Kg
+                        </span>
+                      </Typography>
+                    </Item>
+                  </Grid>
+                  <Grid item xs={12} lg={4}>
+                    <Item
+                      sx={{
+                        background: "#8ac841",
+                        height: "14vh",
+                        borderRadius: "2rem",
+                      }}
+                    >
+                      <Typography
+                        sx={{ color: "#fff", textAlign: "right", mt: "3.5vh" }}
+                      >
+                        Streak:{" "}
+                        <span style={{ display: "block", fontSize: "2rem" }}>
+                          125 days
+                        </span>
+                      </Typography>
+                    </Item>
+                  </Grid>
+                </Grid>
+                <IconButton sx={{ p: 1, display: "inline-block" }}>
+                  <Avatar
+                    alt="S"
+                    sx={{
+                      width: "90%",
+                      height: "80%",
+                      m: "0 auto",
+                      mt: 4,
+                      borderRadius: 0,
+                      border: "none",
+                    }}
+                    src={Graph}
+                  />
+                </IconButton>
+              </Item>
             </Grid>
           </Grid>
+        </Paper>
+        <Paper
+          elevation={13}
+          sx={{ height: "10vh", width: "27vw", ml: "4vw", mt: 1, p: 2 }}
+        >
+          <Typography variant="h6">
+            My <span style={{ color: "#3CC151" }}>Tree</span>
+          </Typography>
+          <Typography sx={{ mt: 1 }}>
+            Days since last scanned: <span style={{ color: "#3CC151" }}>3</span>
+          </Typography>
         </Paper>
       </Paper>
     </ThemeProvider>
